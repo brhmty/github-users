@@ -1,10 +1,10 @@
 import React from "react";
 import RepoInfoContainer from "./RepoInfoContainer";
-//InjectedInFormInput.js
+//InjectedIn--FormInput.js
 
 function RepoInfoSection() {
   return (
-    <div className="flex justify-between max-sm:overflow-y-auto">
+    <div className="mt-7 flex justify-between max-sm:overflow-y-auto">
       <RepoInfoContainer />
       <RepoInfoContainer />
       <RepoInfoContainer />

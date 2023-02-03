@@ -1,10 +1,12 @@
 import React from "react";
-import URPreviewContainer from "./URPreviewContainer";
+import UFPreviewContainer from "./UFPreviewContainer";
+import UPreviewContainer from "./UPreviewContainer";
 
 function URPreviewSection() {
   return (
-    <div>
-      <URPreviewContainer />
+    <div className="mt-7 flex justify-between max-sm:flex-col">
+      <UPreviewContainer />
+      <UFPreviewContainer />
     </div>
   );
 }

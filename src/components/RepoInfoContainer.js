@@ -1,10 +1,10 @@
 import React from "react";
 import { RiBookMarkFill } from "react-icons/ri";
-//InjectedInRepoInfoSection.js
+//InjectedIn--RepoInfoSection.js
 
 function RepoInfoContainer() {
   return (
-    <div className="w-[22%] max-sm:w-full h-20 mt-7 max-sm:mr-2 bg-white flex justify-around items-center">
+    <div className="w-[22%] max-sm:w-full h-20 max-sm:mr-2 bg-white flex justify-around items-center">
       <div className="w-10 max-sm:w-6 h-10 max-sm:h-6 max-sm:ml-8 max-sm:mr-5 rounded-full flex justify-center items-center bg-red-300">
         <RiBookMarkFill className="w-6 max-sm:w-4 h-6 max-sm:h-4 text-red-500" />
       </div>
