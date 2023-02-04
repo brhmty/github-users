@@ -14,7 +14,7 @@ export function BtnSearch() {
 //InjectedIn--URPreviewContainer.js
 export function BtnVisitProfile() {
   return (
-    <button className="w-min h-10 px-3 border-2 rounded-l-full rounded-r-full border-[#88EBF2] hover:border-[#2caeba] hover:bg-[#2caeba] text-[#2caeba] hover:text-white whitespace-nowrap flex self-center items-center">
+    <button className="w-min lg:h-10 sm:h-8 max-sm:h-8 lg:px-3 sm:px-1 max-sm:px-1 border-2 rounded-l-full rounded-r-full border-[#88EBF2] hover:border-[#2caeba] hover:bg-[#2caeba] text-[#2caeba] lg:text-xl  sm:text-xs max-sm:text-sm max-sm:font-light hover:text-white whitespace-nowrap flex self-center items-center">
       Visit Profile
     </button>
   );

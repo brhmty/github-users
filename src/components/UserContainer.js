@@ -12,8 +12,12 @@ function UserContainer() {
         ></img>
       </div>
       <div className="nameContainer ml-5 flex flex-col justify-center">
-        <p className="text-lg font-semibold">John Doe</p>
-        <p className="text-gray-600 text-lg">@j_doe</p>
+        <p className="lg:text-lg md:text-md sm:text-sm max-sm:text-sm font-semibold pointer-events-none">
+          John Doe
+        </p>
+        <p className="text-gray-600 lg:text-lg md:text-md sm:text-sm max-sm:text-sm pointer-events-none">
+          @j_doe
+        </p>
       </div>
     </div>
   );

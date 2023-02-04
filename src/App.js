@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import FormInput from "./components/FormInput";
 import RepoInfoSection from "./components/RepoInfoSection";
 import URPreviewSection from "./components/URPreviewSection";
+import ChartSection from "./components/ChartSection";
+import Footer from "./components/Footer";
+//InjectedIn--index.js
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
         <FormInput />
         <RepoInfoSection />
         <URPreviewSection />
+        <ChartSection />
+        <ChartSection />
+        <Footer />
       </main>
     </div>
   );
