@@ -1,7 +1,7 @@
 import React from "react";
 import BarChart from "./BarChart";
 import PieChart from "./PieChart";
-//InjectedIn--App.js
+//InjectedIn--Dashboard.js
 
 function ChartSection() {
   return (

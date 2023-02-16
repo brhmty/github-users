@@ -1,25 +1,59 @@
 import "./App.css";
-import Header from "./components/Header";
-import FormInput from "./components/FormInput";
-import RepoInfoSection from "./components/RepoInfoSection";
-import URPreviewSection from "./components/URPreviewSection";
-import ChartSection from "./components/ChartSection";
-import Footer from "./components/Footer";
+import React, { useReducer, createContext } from "react";
+import PageLogin from "./pages/PageLogin";
+import PageDashboard from "./pages/PageDashboard";
+import PageError from "./pages/PageError";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //InjectedIn--index.js
 
+export const MainContext = createContext();
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "setName": {
+      return {
+        ...state,
+        name: action.payload,
+      };
+    }
+    case "setCInitial": {
+      return {
+        ...state,
+        cInitial: action.payload,
+      };
+    }
+    case "setRepoInfo": {
+      return {
+        ...state,
+        repoInfo: action.payload,
+      };
+    }
+  }
+}
+
+const defaultState = {
+  name: "",
+  cInitial: "",
+  repoInfo: "",
+};
+
 function App() {
+  const [state, dispatch] = useReducer(reducer, defaultState);
   return (
-    <div className="w-screen min-h-min bg-[#EFF4FB]">
-      <Header />
-      <main className="w-[87%] lg:mt-20 md:mt-16 sm:mt-8 mt-8 mx-auto">
-        <FormInput />
-        <RepoInfoSection />
-        <URPreviewSection />
-        <ChartSection />
-        <ChartSection />
-        <Footer />
-      </main>
-    </div>
+    <BrowserRouter>
+      <MainContext.Provider
+        value={{
+          dispatch,
+          state,
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<PageDashboard />} />
+          <Route path="/login" element={<PageLogin />} />
+          <Route path="*" element={<PageError />} />
+        </Routes>
+      </MainContext.Provider>
+    </BrowserRouter>
   );
 }
 
